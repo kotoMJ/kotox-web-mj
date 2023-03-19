@@ -4,7 +4,7 @@ type Props = {
     tags: Array<string>,
 }
 
-const MetaData = ({name, picture, tags}: Props) => {
+const MetaDataView = ({name, picture, tags}: Props) => {
     return (
         <div className="flex items-center">
             <img src={picture} className="w-12 h-12 p2 mr-4" alt={name}/>
@@ -21,4 +21,4 @@ const MetaData = ({name, picture, tags}: Props) => {
     )
 }
 
-    export default MetaData
+    export default MetaDataView

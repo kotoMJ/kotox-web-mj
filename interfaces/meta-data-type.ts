@@ -1,7 +1,7 @@
-type Author = {
+type MetaDataType = {
   name: string
   picture: string,
   tags: Array<string>
 }
 
-export default Author
+export default MetaDataType

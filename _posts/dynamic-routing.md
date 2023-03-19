@@ -4,8 +4,9 @@ excerpt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmo
 coverImage: '/assets/blog/dynamic-routing/cover.jpg'
 date: '2020-03-16T05:35:07.322Z'
 author:
-  name: MJ Kasper
-  picture: '/assets/blog/authors/jj.jpeg'
+  name: Android
+  picture: '/assets/blog/meta/android_logo_128.png'
+  tags: ['media','camera','custom']
 ogImage:
   url: '/assets/blog/dynamic-routing/cover.jpg'
 ---

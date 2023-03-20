@@ -13,13 +13,13 @@ type Props = {
 }
 
 export default function Index({ allPosts }: Props) {
-  const heroPost = allPosts[0]
-  const morePosts = allPosts.slice(1)
+  const heroPost = allPosts[1]
+  const morePosts = allPosts.slice(2)
   return (
     <>
       <Layout>
         <Head>
-          <title>{`Next.js Blog Example with ${CMS_NAME}`}</title>
+          <title>{`Android developer's blog`}</title>
         </Head>
         <Container>
           <Intro />

@@ -1,12 +1,12 @@
 ---
-title: 'Dynamic Routing and Static Generation'
+title: 'Shared String Resources'
 excerpt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla facilities morbi tempus.'
-coverImage: '/assets/blog/dynamic-routing/cover.jpg'
+coverImage: '/assets/blog/shared-string/cover.jpg'
 date: '2023-03-16T05:35:07.322Z'
 metaData:
   name: Android
   picture: '/assets/blog/meta/android_logo_128.png'
-  tags: ['media','camera','custom']
+  tags: ['resources','shared','poeditor']
 ogImage:
   url: '/assets/blog/dynamic-routing/cover.jpg'
 ---

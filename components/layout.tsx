@@ -13,7 +13,7 @@ const Layout = ({ preview, children }: Props) => {
     <>
       <Meta />
       <div className="min-h-screen">
-        {/*<Alert preview={preview} />*/}
+        {/*<Alert custom-camera={custom-camera} />*/}
         <SocialsView />
         <main>{children}</main>
       </div>

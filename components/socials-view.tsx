@@ -7,7 +7,7 @@ const SocialsView = (preview) => {
         <div className="bg-neutral-50 border-t border-neutral-200 p-4">
             <div className="flex items-center">
                 <span className="rounded outline p-1 text-left text-lg mr-4 font-semibold">
-                    <Link as={`/posts/_aboutme`} href="/posts/[slug]">
+                    <Link as={`/posts/aboutme`} href="/posts/[slug]">
                            About me
                         </Link>
                 </span>

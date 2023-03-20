@@ -1,5 +1,5 @@
 ---
-title: 'Michal Jeníček'
+title: 'Michal Jeníček • Mj'
 excerpt: 'I am Michal - a software engineer living in Central Bohemia part of Czechia, Europe. I am focused on Android
 development, but I am also passionated in the full-stack development.'
 coverImage: '/assets/blog/preview/cover.jpg'

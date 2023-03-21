@@ -1,15 +1,15 @@
-import Avatar from './avatar'
+import MetaDataView from './meta-data-view'
 import DateFormatter from './date-formatter'
 import CoverImage from './cover-image'
 import Link from 'next/link'
-import type Author from '../interfaces/author'
+import type MetaDataType from '../interfaces/meta-data-type'
 
 type Props = {
   title: string
   coverImage: string
   date: string
   excerpt: string
-  author: Author
+  metaData: MetaDataType
   slug: string
 }
 
@@ -18,7 +18,7 @@ const HeroPost = ({
   coverImage,
   date,
   excerpt,
-  author,
+  metaData,
   slug,
 }: Props) => {
   return (
@@ -43,7 +43,7 @@ const HeroPost = ({
         </div>
         <div>
           <p className="text-lg leading-relaxed mb-4">{excerpt}</p>
-          <Avatar name={author.name} picture={author.picture} />
+          <MetaDataView name={metaData.name} picture={metaData.picture} tags={metaData.tags} />
         </div>
       </div>
     </section>

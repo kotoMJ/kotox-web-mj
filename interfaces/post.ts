@@ -1,11 +1,11 @@
-import type Author from './author'
+import type MetaDataType from './meta-data-type'
 
 type PostType = {
   slug: string
   title: string
   date: string
   coverImage: string
-  author: Author
+  metaData: MetaDataType
   excerpt: string
   ogImage: {
     url: string

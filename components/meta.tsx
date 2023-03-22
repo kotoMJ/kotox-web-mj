@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import {CMS_INTRO, HOME_OG_IMAGE_URL} from '../lib/constants'
+import {CMS_INTRO} from '../lib/constants'
 
 const Meta = () => {
     return (
@@ -36,7 +36,6 @@ const Meta = () => {
                 name="description"
                 content={CMS_INTRO}
             />
-            <meta property="og:image" content={HOME_OG_IMAGE_URL}/>
         </Head>
     )
 }

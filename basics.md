@@ -1,26 +1,25 @@
 # Nextjs Starter steps
 
-Local
+Local first time:
 1) At the very first run: `npm install`
-2) Generate static pages by command: `next build`
+
+Local any dev session:
+1) Run: `next` which will start pages locally and will automatically update any changes. Just reload page to see it.
+
+
+Remote server (e.g. rosti) first time
+1) Ensure you have enough memory on the machine for first build (eventually temporarily increase)
+2) `npm install`
 3) For production Image Optimization with Next.js, the optional `sharp` package is strongly recommended. Run `yarn add sharp`, and Next.js will use it automatically for Image Optimization.
-4) Process: `npm run build`
-5) Start app by command: `npm start`
+4) `npm run build`
 
-
-Remote server (e.g. rosti)
-1) `npm install`
-2) `npm i -g next`
-3) `npx kill-port 3000` to prevent next build hang forever
-4) `next build` ...this might take a long time. Also in any weird troubles remove `.next` and eventually `node_modules` directories
-5) For production Image Optimization with Next.js, the optional `sharp` package is strongly recommended. Run `yarn add sharp`, and Next.js will use it automatically for Image Optimization.
-6) `next build`
-7) `npm run build`
-8`npm start`
+Remote server any update
+1) `npm run build`
+2) `supervisorctl restart app`  (rosti.cz specific command to restart the app)
 
 
 General
-1) `npx next -v` checks out version of nextjs. It should be at least 12
+1) `npx next -v` checks out version of nextjs. It should be at least 12 for our case.
 
 
 # NODE Basics

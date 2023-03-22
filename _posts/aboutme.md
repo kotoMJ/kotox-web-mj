@@ -10,7 +10,8 @@ metaData:
     picture: ''
     tags: []
 ogImage:
-    url: '/assets/blog/preview/cover.jpg'
+    url: '/assets/blog/about/cover-talk-brno.jpg'
+ogTitle: "I am MJ a Software craftsman focused on Android ecosystem."
 ---
 
 Hi there! **It's me** Michal (aka **MJ**)  - a **Software Engineer** crafting apps in Central Bohemia of Czechia, Europe.

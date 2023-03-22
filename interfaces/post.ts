@@ -10,6 +10,7 @@ type PostType = {
   ogImage: {
     url: string
   }
+  ogTitle: string
   content: string
 }
 

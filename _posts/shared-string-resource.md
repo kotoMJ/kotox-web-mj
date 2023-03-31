@@ -15,7 +15,7 @@ ogImage:
 ogTitle: "Share iOs string resources with Android"
 ---
 
-# Why to share string resources
+# The reason for sharing string resources
 
 There might be a requirement for mobile string resources to be defined or adjusted by management or copywriters. There
 also

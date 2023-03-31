@@ -38,7 +38,8 @@ There is a plenty of localization platforms. Let's mention some:
 
 Now skip doing research and comparing those platforms.
 
-**Let's assume** circumstances have chosen the **PoEditor** variant. And on top of that, it was decided to **import all strings
+**Let's assume** circumstances have chosen the **PoEditor** variant. And on top of that, it was decided to **import all
+strings
 from iOS** including iOS specific string resource keys and parameter placeholders. In order to spare money and use
 free tier to maximum, **Android should use imported iOS variants**.
 
@@ -59,3 +60,17 @@ plugin** and implement any processing specifically to our project needs.
 
 Anyone interested in implementation details can check following simplified PoEditor Android plugin for specific project
 needs: [Kotox AndroidPoeditorPlugin](https://github.com/kotoMJ/kotox-android/blob/main/build-logic/README-POEDITOR.md)
+
+# Why using gradle plugin at all?
+
+Why not using some easy scripting like python or ruby? For PoEditor we have
+e.g. [Poesie](https://github.com/NijiDigital/poesie) available. So Why not use it?
+
+Well, we can.
+
+But by using gradle plugin **we are writing** in **Kotlin and following Android scripting mechanism** already used by the
+project. And with gradle task we can **easily connect import of shared resources to CI server**. So it will be part of CI
+automation process.
+
+Happy coding!
+MJ

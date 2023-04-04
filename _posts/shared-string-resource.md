@@ -12,21 +12,18 @@ metaData:
     tags: ['android','resources','shared','poeditor']
 ogImage:
     url: '/assets/blog/post/shared-string/cover.jpg'
-ogTitle: "Share iOs string resources with Android"
+ogTitle: "Share iOS string resources with Android"
 ---
 
-# The reason for sharing string resources
+This is a story about one project where Android platform is catching up iOS when using shared string resources.
 
-There might be a requirement for mobile string resources to be defined or adjusted by management or copywriters. There
-also
-might be a requirement to add localization later by those roles. And on top of that the requirement to have strings
-synced across platforms.
+# Localization platform
 
-**And here we are.**  
-This points to some localization platform and translation management system.
+At the beginning there was a requirement where string resources in the mobile app should be easily reviewable, updatable
+and in sync
+across mobile platforms.
 
-# Localization platforms
-
+So we started to discuss some localization platform and translation management system.
 There is a plenty of localization platforms. Let's mention some:
 
 * [Phrase](https://phrase.com/)
@@ -36,41 +33,43 @@ There is a plenty of localization platforms. Let's mention some:
 * [Crowdin](https://crowdin.com/)
 * ...
 
-Now skip doing research and comparing those platforms.
+Here we can skip discussion about which platform is better than the other. We can state the fact that it was chosen the
+**[PoEditor](https://poeditor.com/)** variant. And on top of that, it was decided to **import all existing
+strings from iOS** including iOS specific string resource keys and parameter placeholders into the PoEditor platform. In
+order to spare money and use free tier to maximum, **Android should use imported iOS variants**.
 
-**Let's assume** circumstances have chosen the **PoEditor** variant. And on top of that, it was decided to **import all
-strings
-from iOS** including iOS specific string resource keys and parameter placeholders. In order to spare money and use
-free tier to maximum, **Android should use imported iOS variants**.
-
-# Integrate PoEditor in Android project standard way
+# Integrate PoEditor in Android
 
 There are some tips
-on [how to translate iOs and Android apps in the same project](https://poeditor.com/kb/how-to-keep-ios-and-android-strings-in-the-same-localization-project).
+on [how to translate iOS and Android apps in the same project](https://poeditor.com/kb/how-to-keep-ios-and-android-strings-in-the-same-localization-project).
 
-There are also [plugins](https://github.com/hyperdevs-team/poeditor-android-gradle-plugin) treating standard situations.
+There are also [plugins](https://github.com/hyperdevs-team/poeditor-android-gradle-plugin) treating standard cases.
 
-But what if you are in the situation described above, so you have to **convert keys, parameters, split strings to
+But I was in the situation described above, which means **convert keys, parameters, split strings to
 modules, etc.**
 
-# Integrate PoEditor in Android project custom way
-
 For situation when there is a need for custom data post-processing, **the way is to create customized convention
-plugin** and implement any processing specifically to our project needs.
+plugin** and implement any processing specifically to the project needs.
 
-Anyone interested in implementation details can check following simplified PoEditor Android plugin for specific project
-needs: [Kotox AndroidPoeditorPlugin](https://github.com/kotoMJ/kotox-android/blob/main/build-logic/README-POEDITOR.md)
+For anyone interested in implementation details, let's check following simplified PoEditor Android plugin for specific
+project needs in the sample
+repo: [Kotox AndroidPoeditorPlugin](https://github.com/kotoMJ/kotox-android/blob/main/build-logic/README-POEDITOR.md)
 
 # Why using gradle plugin at all?
 
-Why not using some easy scripting like python or ruby? For PoEditor we have
-e.g. [Poesie](https://github.com/NijiDigital/poesie) available. So Why not use it?
+Why I am not using some easy scripting like python or ruby? For PoEditor there is
+e.g. [Poesie](https://github.com/NijiDigital/poesie) available. So Why not to use it?
 
-Well, we can.
+Well, that's also an option.
 
-But by using gradle plugin **we are writing** in **Kotlin and following Android scripting mechanism** already used by the
-project. And with gradle task we can **easily connect import of shared resources to CI server**. So it will be part of CI
-automation process.
+But by using gradle plugin I am using the advantage of
+the [convention plugins](https://proandroiddev.com/exploring-now-in-android-gradle-convention-plugins-91983825bcd7)
+already used by the project and let project define which module wants import shared string resources. Not mentioning
+advantage of writing logic in Kotlin.
 
-Happy coding!
-MJ
+With the string resources import integrated as the gradle plugin it's a small step to connect this action in the CI
+server and automate it.
+
+So the sharing string resources begun.  
+Happy coding!  
+MJ    
